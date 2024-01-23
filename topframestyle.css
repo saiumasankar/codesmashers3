@@ -1,0 +1,14 @@
+.outer
+{
+    display: flex;
+}
+.inner
+{
+    width: 150%; 
+    margin-top: 3%; 
+    margin-left: -10%;
+}
+h1{
+    color: white; 
+    margin-left: 40%;
+}

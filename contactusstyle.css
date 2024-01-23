@@ -1,0 +1,46 @@
+body
+{
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+.outer
+{
+    width: 20%; 
+    padding: 3%; 
+    display: flex; 
+    justify-content: center; 
+    flex-direction: column; 
+    background-color: rgb(21, 26, 38); 
+    margin-top: 5%;
+}
+.inner1
+{
+    color: white; 
+    display: flex; 
+    justify-content: center; 
+    font-size: 150%;
+}
+.inner2
+{
+    display: flex; 
+    margin-top: 5%;
+}
+img
+{
+    width: 10%;
+}
+h6
+{
+    color: white;
+}
+.inner3
+{
+    display: flex; 
+    margin-top: 5%;
+}
+.inner4
+{
+    display: flex; 
+    margin-top: 5%;
+}

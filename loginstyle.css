@@ -1,0 +1,61 @@
+input
+{
+    margin-top: 2%;
+}
+a
+{
+    margin-top: 5%;
+}
+button
+{
+    margin-top: 2%;
+}
+body
+{
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column;
+}
+.outer
+{
+    width: 20%;
+    display: flex; 
+    justify-content: center; 
+    padding: 3%; 
+    flex-direction: column;
+    margin-top: 2%; 
+    background-color: rgb(38, 47, 51);
+}
+.inner1
+{
+    font-size: 150%; 
+    display: flex; 
+    justify-content: center; 
+    color: white; 
+    margin-top: -5%;
+}
+.inner2
+{
+    display: flex; 
+    color: white; 
+    margin-top: 15%;
+}
+.inner3
+{
+    display: flex; 
+    color: white; 
+    margin-top: 8%;
+}
+.button1
+{
+    margin-top: 5%; 
+    width: 25%; 
+    background-color: rgb(24, 24, 225); 
+    color: white;
+}
+.inner4
+{
+    color: white; 
+    margin-top: 5%;
+}

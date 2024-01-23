@@ -1,0 +1,54 @@
+body
+{
+    display: flex; 
+    justify-content: center;
+}
+form
+{
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    padding: 3%; 
+    width: 40%; 
+    margin-top: 2%; 
+    background-color: rgb(21, 26, 38);
+}
+.inner
+{
+    display: flex; 
+    justify-content: center; 
+    font-size: 150%; 
+    color: white;
+}
+.inner3
+{
+    color: white; 
+    display: flex; 
+    flex-direction: column; 
+    width: 55%; 
+    margin-top: 10%;
+}
+.inner2
+{
+    color: white; 
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-around;
+    width: 55%; 
+    margin-top: 10%;
+
+}
+button
+{
+    background-color: rgb(204, 204, 242); 
+    width: 50%;
+
+}
+.inner1
+{
+    color: white; 
+    display: flex; 
+    flex-direction: column; 
+    width: 55%; 
+    margin-top: 10%;
+}

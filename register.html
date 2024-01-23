@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="registerstyle.css">
+</head>
+<body>
+    <form  name="registrationForm" onsubmit="return validationForm()" >
+        <div class="inner"><u>REGISTER HERE</u></div>
+        <div class="inner1">
+            <label for="firstname">First Name<sup style="color: red;">*</sup>: </label>
+            <input type="text" id="firstname" name="username">
+        </div>
+        <div class="inner3">
+            <label for="lastname">Last Name<sup style="color: red;">*</sup>: </label>
+            <input type="text" id="lastname">
+        </div>
+        <div class="inner3">
+            <label for="password">Password<sup style="color: red;">*</sup>: </label>
+            <input type="password" id="password" name="password">
+        </div>
+        <div class="inner3">
+            <label for="confirmpassword">Confirm Password<sup style="color: red;">*</sup>: </label>
+            <input type="password" id="confirmpassword" name="confirmpassword">
+        </div>
+        <div class="inner3">
+            <label for="emailid">Email<sup style="color: red;">*</sup>: </label>
+            <input type="email" id="emailid" name="emailid">
+        </div>
+        <div class="inner3">
+            <label for="mobile">Phone<sup style="color: red;">*</sup>: </label>
+            <input type="tel" maxlength="10" minlength="8" name="mobile">
+        </div>
+        <div class="inner3">
+            <label for="dob">Date of Birth<sup style="color: red;">*</sup>: </label>
+            <input type="date" id="dob">
+        </div>
+        <div class="inner3">
+            <label for="address">Address<sup style="color: red;">*</sup>: </label>
+            <textarea name="address" id="address" cols="30" rows="10"></textarea>
+        </div>
+        <div class="inner2">
+            <label for="gender">Gender<sup style="color: red;">*</sup>: </label>
+            <input type="radio" id="male" name="gender"value="Male">
+            <label for="male">Male</label>
+            <input type="radio" id="male" value="female" name="gender">
+            <label for="female">Female</label>
+        </div>
+        <div class="inner3">
+            <input type="submit" value="register">
+        </div>
+
+    </form>
+    <script>
+        function validationForm()
+        {
+            var x = document.forms["registrationForm"]["username"].value;
+            var y = document.forms["registrationForm"]["password"].value;
+            var z = document.forms["registrationForm"]["confirmpassword"].value;
+            var a = document.forms["registrationForm"]["emailid"].value;
+            var b = document.forms["registrationForm"]["mobile"].value;
+            if(x.length < 6)
+            {
+                alert("Username must be of atleast 6 characters");
+                return false;
+            }
+            if(y.length < 8)
+            {
+                alert("Password must be of atleast 8 characters");
+                return false;
+            }
+            var capital = false;
+            var small = false;
+            var digit = false;
+            var special = false;
+            for(var i = 0; i < y.length; i++)
+            {
+                if(y[i]>='A' && y[i]<='Z')
+                    capital = true;
+                if(y[i]>='a' && y[i]<='z')
+                    small = true;
+                if(y[i]>='0' && y[i]<='9')
+                    digit = true;
+                if(y[i]=='@' || y[i]=='#' || y[i]=='$' || y[i]=='%')
+                    special = true;
+            }
+            if(!capital)
+            {
+                alert("Password must contain a uppercase letter");
+                return false;
+            }
+            if(!small)
+            {
+                alert("Password must contain a lowercase letter");
+                return false;
+            }
+            if(!digit)
+            {
+                alert("Password must contain a digit.");
+                return false;
+            }
+            if(!special)
+            {
+                alert("Password must contain a special character.");
+                return false;
+            }
+            if(y!=z)
+            {
+                alert("Passsword and confirm password must be same.");
+                return false;
+            }
+            if(a.indexOf('@')==-1 || a.length < 6)
+            {
+                alert("Email id must be in form @domain.com");
+                return false;
+            }
+            if(b.length!=10 || b[0]<6 || b[0]>9)
+            {
+                alert("Mobile number must be of 10 digits and starts with 6-9");
+                return false;   
+            }
+        }
+    </script>
+</body>
+</html>
